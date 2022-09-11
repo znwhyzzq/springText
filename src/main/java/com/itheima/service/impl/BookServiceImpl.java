@@ -6,19 +6,24 @@ import com.itheima.dao.userDao;
 import com.itheima.service.BookService;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
+@Service
 public class BookServiceImpl implements BookService {
+    @Autowired
     private BookDao bookDao;
-    private userDao userDao;
-public  BookServiceImpl(BookDao bookDao,userDao userDao){
-    this.bookDao=bookDao;
-    this.userDao=userDao;
-}
+//    private userDao;
+//public  BookServiceImpl(BookDao bookDao){
+//    this.bookDao=bookDao;
+////    this.userDao=userDao;
+//}
 
     public void save() {
-        System.out.println(" service save...");
+        System.out.println("book service save...");
         bookDao.save();
-        userDao.save();
+//        userDao.save();
     }
 
 //    public void setBookDao(BookDao bookDao) {
