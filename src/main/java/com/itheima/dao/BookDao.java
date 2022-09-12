@@ -1,5 +1,5 @@
-package com.itheima.dao;
-
-public interface BookDao {
-    void save();
-}
+//package com.itheima.dao;
+//
+//public interface BookDao {
+//    void save();
+//}

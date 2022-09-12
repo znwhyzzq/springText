@@ -11,8 +11,8 @@ import javax.sql.DataSource;
 
 @Configurable
 @ComponentScan("com.itheima")
-@Import({JdbcConfig.class})
-
+@Import({JdbcConfig.class, MybatisConfig.class})
+@PropertySource("jdbc.properties")
 public class SpringConfig {
 
 }
