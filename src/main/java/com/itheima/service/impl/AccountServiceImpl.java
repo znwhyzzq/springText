@@ -1,14 +1,22 @@
-//package com.itheima.service.impl;
-//
-//import com.itheima.dao.AccountDao;
-//import com.itheima.domain.Account;
-//import com.itheima.service.AccountService;
-//import org.springframework.stereotype.Service;
-//
-//import java.util.List;
-//
-//@Service
-//public  class AccountServiceImpl implements AccountService {
+package com.itheima.service.impl;
+
+import com.itheima.dao.AccountDao;
+import com.itheima.domain.Account;
+import com.itheima.service.AccountService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public  class AccountServiceImpl implements AccountService {
+    @Autowired
+    private AccountDao accountDao;
+    @Override
+    public void trsnafer(String out, String in, Double money) {
+        accountDao.outMoney(out,money);
+        accountDao.inMoney(in,money);
+    }
 //    private AccountDao accountDao;
 //
 //    public AccountServiceImpl(AccountDao accountDao) {
@@ -22,5 +30,5 @@
 //    public List<Account> findAll(){return accountDao.findAll();}
 //
 //
-//
-//}
+
+}

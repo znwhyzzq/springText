@@ -20,10 +20,10 @@ public class BookDaoImpl implements BookDao {
 //   public void setList(List<String> list){this.list=list;}
 
 
-    public void save() {
-
-        System.out.println("book  dao save....");
-    }
+//    public void save() {
+//
+//        System.out.println("book  dao save....");
+//    }
 //        for (int i = 0; i < 10000; i++) {
 //
 //            System.out.println("book  dao save....");
@@ -32,8 +32,14 @@ public class BookDaoImpl implements BookDao {
 //        Long totalTime = endTime - startTime;
 //        System.out.println(totalTime + "ms");
 
-    public void update() {
-        System.out.println("book  dao update....");
+//    public void update() {
+//        System.out.println("book  dao update....");
+//    }
+
+    @Override
+    public String findName(int id) {
+        System.out.println("id:"+id);
+        return "itcast";
     }
 }
 

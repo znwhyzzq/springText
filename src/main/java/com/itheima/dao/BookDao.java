@@ -1,8 +1,9 @@
 package com.itheima.dao;
 
 public interface BookDao {
-    void save();
-    void update();
+    public String findName(int id);
+//    void save();
+//    void update();
 
 //    void delete();
 //    void select();

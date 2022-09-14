@@ -8,13 +8,15 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.io.IOException;
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes= SpringConfig.class)
 public class AccountServiceTest {
     @Autowired
     private AccountService accountService;
     @Test
-    public void testFindById(){
-        System.out.println(accountService.findById(2));
+    public void testTransfer()throws IOException {
+       accountService.trsnafer("Tom","Jerry",100D);
     }
 }
